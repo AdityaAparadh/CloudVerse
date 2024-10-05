@@ -82,3 +82,23 @@ This will install an Nginx server with a sample html file on your EC2 instance.
 > You might need to append `http://` to your IP. Then my full address would become `http://<my public IP>`
 
 
+
+
+---
+
+## S3 Bucket Policy
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Statement1",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::satejbucket/*"
+        }
+    ]
+}
+```
